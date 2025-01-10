@@ -1,0 +1,42 @@
+/**
+        },
+
+        loadImages: function() {
+            var images = this.options.images;
+            var container = this.$container;
+
+            if (Array.isArray(images) && images.length) {
+                images.forEach(function(image) {
+                    var imgElement = $('<img>', {
+                        src: image.src,
+                        alt: image.alt || 'Fitness Image',
+                        class: 'dynamic-image'
+                    });
+                    container.append(imgElement);
+                });
+            }
+        }
+    };
+
+    $.fn.singlePageNav = function(options) {
+        return this.each(function() {
+            var singlePageNav = Object.create(SinglePageNav);
+            singlePageNav.init(options, this);
+        });
+    };
+
+    $.fn.singlePageNav.defaults = {
+        offset: 0,
+        threshold: 120,
+        speed: 400,
+        currentClass: 'current',
+        easing: 'swing',
+        updateHash: false,
+        filter: '',
+        onComplete: false,
+        beforeStart: false,
+        loadImages: false, // Flag to enable image loading
+        images: [] // Array of images to load dynamically
+    };
+
+})(jQuery, window, document);
