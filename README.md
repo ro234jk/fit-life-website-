@@ -1,4 +1,4 @@
-# fit-life-website
+# Fit-life-website
 
 
 Welcome to the **FitLife** fitness website repository! This project aims to inspire and guide users on their fitness journey by providing resources, motivation, and tools for a healthier lifestyle.
